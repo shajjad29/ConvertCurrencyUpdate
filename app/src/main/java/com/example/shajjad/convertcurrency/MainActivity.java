@@ -63,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
         radioGroup.clearCheck();
     }
 
+    public  void test(){
+
+    }
+
     public void viceVersa(View view) {
         String tempInput = editTextResult.getText().toString();
 
