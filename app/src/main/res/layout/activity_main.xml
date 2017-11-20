@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/full_activity"
+    android:padding="20dp"
+    >
+    <LinearLayout
+        android:id="@+id/linearLayoutFirst"
+        android:layout_width="match_parent"
+        android:background="@drawable/heading"
+        android:layout_height="150dp">
+    <TextView
+        android:id="@+id/textViewId"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Currency Converter"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="40dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextBDT"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/linearLayoutFirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter BDT"
+        android:inputType="numberDecimal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <TextView
+        android:id="@+id/textViewConvertedTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Converted To"
+        android:layout_below="@+id/editTextBDT"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textViewConvertedTo"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/radioButtonUSD"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="USD"/>
+        <RadioButton
+            android:id="@+id/radioButtonCAD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="CAD"/>
+        <RadioButton
+            android:id="@+id/radioButtonEUR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="EUR"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextResult"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:inputType="numberDecimal"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:hint="Converted Currency"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/editTextResult">
+
+        <Button
+            android:layout_weight="30"
+            android:id="@+id/buttonClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="CLEAR"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:padding="10dp"
+            android:background="@drawable/button"
+            android:onClick="clear"/>
+    <Button
+
+        android:id="@+id/buttonViceVersa"
+        android:layout_weight="30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:text="VICE-VERSA"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_marginLeft="10dp"
+        android:onClick="viceVersa"/>
+
+        <Button
+            android:id="@+id/buttonConvert"
+            android:layout_weight="30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="CONVERT"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button"
+            android:onClick="convert"/>
+    </LinearLayout>
+
+</RelativeLayout>
